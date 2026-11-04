@@ -210,7 +210,7 @@ $('#scr').onchange=e=>{S.ui.scr=e.target.value;save();$('#q').value?search($('#q
 $('#tl').onchange=e=>{S.ui.tl=+e.target.value;save();$('#q').value?search($('#q').value):show(S.cur,true)};
 const sp=document.createElement('div');sp.id='splash';sp.innerHTML=`<img src="${AV}" alt="Dr Vasudevan Rajagopalan"><span class="nm"></span><div class="inv2" lang="sa">${SRI}<br><span lang="ta">${TA(SRI)}</span></div><h1>Dr Vasudevan's Gita Companion</h1><p>Tap to begin</p>`;sp.onclick=()=>sp.remove();document.body.append(sp);setTimeout(()=>sp.remove(),2500);
 $('#inv').innerHTML=`<span class="nm"></span><span lang="sa">${SRI}</span><span lang="ta">${TA(SRI)}</span><span class="nm"></span>`;
-applyUI();show(S.cur);
+applyUI();nav();about();
 {const FB=document.getElementById('av').dataset.fb,p=new Image();p.onerror=()=>{AV=FB;document.querySelectorAll('img').forEach(i=>{if(i.getAttribute('src')==='vasu.jpg')i.src=FB});document.documentElement.style.setProperty('--img',`url("${FB}")`)};p.src=AV}
 </script>
 </body>
